@@ -31,7 +31,7 @@ echo "$VERSION" > ~/version
 mkdir -p ./AppDir/bin
 cd ./REDRIVER2/src_rebuild
 premake5 gmake2
-mv -v REDRIVER ../AppDir/bin
+mv -v REDRIVER2 ../AppDir/bin
 cd ..
 cp -f .flatpak/io.github.opendriver2.Redriver2.desktop ../AppDir
 cp -f .flatpak/icon.png ../AppDir
