@@ -32,6 +32,7 @@ echo "$VERSION" > ~/version
 mkdir -p ./AppDir/bin
 cd ./REDRIVER2/src_rebuild
 premake5 gmake
+make config=release_x64 -j$(nproc)
 mv -v REDRIVER2 ../AppDir/bin
 cd ..
 cp -f .flatpak/io.github.opendriver2.Redriver2.desktop ../AppDir
