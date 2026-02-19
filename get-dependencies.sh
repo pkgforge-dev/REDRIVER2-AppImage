@@ -11,7 +11,7 @@ pacman -Syu --noconfirm \
     libjpeg-turbo \
     sdl2          \
     openal        \
-    premake5
+    premake
     
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
