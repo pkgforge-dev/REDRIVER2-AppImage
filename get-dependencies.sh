@@ -6,8 +6,13 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-# pacman -Syu --noconfirm PACKAGESHERE
-
+pacman -Syu --noconfirm \
+    libdecor      \
+    libjpeg-turbo \
+    sdl2          \
+    openal        \
+    premake5
+    
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
@@ -16,11 +21,13 @@ get-debloated-pkgs --add-common --prefer-nano
 #make-aur-package PACKAGENAME
 
 # If the application needs to be manually built that has to be done down here
+echo "Making nightly build of REDRIVER2..."
+echo "---------------------------------------------------------------"
+REPO="https://github.com/OpenDriver2/REDRIVER2"
+VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
+git clone --branch develop-SoapyMan --single-branch --recursive --depth 1 "$REPO" ./REDRIVER2
+echo "$VERSION" > ~/version
 
-# if you also have to make nightly releases check for DEVEL_RELEASE = 1
-#
-# if [ "${DEVEL_RELEASE-}" = 1 ]; then
-# 	nightly build steps
-# else
-# 	regular build steps
-# fi
+mkdir -p ./AppDir/bin
+cd ./REDRIVER2/src_rebuild
+premake5 gmake2
