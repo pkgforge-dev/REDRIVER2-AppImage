@@ -4,3 +4,4 @@ Name=REDRIVER2
 Icon=REDRIVER2
 Exec=REDRIVER2
 Categories=Game;Action;Racing
+StartupWMClass=
