@@ -52,6 +52,7 @@ if [ "$ARCH" = "aarch64" ]; then
     cd build
     make config=release_arm64 -j$(nproc)
 else
+    premake5 gmake
     cd build
     make config=release_x64 -j$(nproc)
 fi
