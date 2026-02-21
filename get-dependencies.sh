@@ -52,6 +52,7 @@ if [ "$ARCH" = "aarch64" ]; then
     sed -i 's/typedef long            long32;/typedef int             long32;/g' PsyCross/include/psx/types.h
     sed -i 's/typedef unsigned long   u_long;/typedef unsigned int    u_long;/g' PsyCross/include/psx/types.h
     sed -i 's/\blong\b/int/g' PsyCross/include/psx/types.h
+    sed -i 's/- P_LEN ==/ - (P_LEN + 1) ==/g' PsyCross/include/psx/libgpu.h
     premake5 gmake
     cd build
     make config=release_arm64 -j$(nproc)
