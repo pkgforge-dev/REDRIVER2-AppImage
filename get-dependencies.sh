@@ -37,14 +37,11 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./REDRIVER2/src_rebuild
-#rm -rf src_rebuild/premake_modules/usage
-#sed -i 's/api.register("uses",/api.register("usage_uses",/g' premake_modules/usage/usage.lua
 sed -i 's/require "premake_modules\/usage"/-- require "premake_modules\/usage"/g' premake5.lua
 sed -i 's/\bconfiguration\b/filter/g' premake5.lua
-sed -i '/includedirs {/a \ \ \ \ \ \ \ \ "./PsyCross/include",\n\ \ \ \ \ \ \ \ "./PsyCross/include/psx",\n\ \ \ \ \ \ \ \ "./PsyCross/include/PsyX",' premake5.lua
-sed -i '/links {/a \ \ \ \ \ \ \ \ "PsyCross",' premake5.lua
-sed -i '/libdirs {/a \ \ \ \ \ \ \ \ "./PsyCross/bin/Release",\n\ \ \ \ \ \ \ \ "./PsyCross/bin/Debug",' premake5.lua
-
+sed -i '/includedirs {/a \ \ \ \ \ \ \ \ "PsyCross/include",\n\ \ \ \ \ \ \ \ "PsyCross/include/psx",\n\ \ \ \ \ \ \ \ "PsyCross/include/PsyX"' premake5.lua
+sed -i '/links {/a \ \ \ \ \ \ \ \ "PsyCross",\n\ \ \ \ \ \ \ \ "m"' premake5.lua
+sed -i '/libdirs {/a \ \ \ \ \ \ \ \ "PsyCross/bin/Release",\n\ \ \ \ \ \ \ \ "PsyCross/bin/Debug"' premake5.lua
 premake5 gmake
 cd build
 make config=release_x64 -j$(nproc)
