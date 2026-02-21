@@ -1,6 +1,6 @@
 <div align="center">
 
-# REDRIVER2-AppImage 🐧
+# WIP DON'T USE IT YETREDRIVER2-AppImage 🐧
 
 [![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/REDRIVER2-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/REDRIVER2-AppImage/releases/latest)
 [![CI Build Status](https://github.com//pkgforge-dev/REDRIVER2-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/REDRIVER2-AppImage/releases/latest)
