@@ -37,7 +37,8 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./REDRIVER2/src_rebuild
-sed -i 's/api.register("uses",/api.register("usage_uses",/g' premake_modules/usage/usage.lua
+rm -rf src_rebuild/premake_modules/usage
+#sed -i 's/api.register("uses",/api.register("usage_uses",/g' premake_modules/usage/usage.lua
 premake5 gmake
 cd build
 make config=release_x64 -j$(nproc)
