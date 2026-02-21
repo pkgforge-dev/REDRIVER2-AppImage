@@ -37,6 +37,8 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./REDRIVER2/src_rebuild
+sed -i 's/require "premake_modules\/usage"/-- require "premake_modules\/usage"/g' premake5.lua
+sed -i 's/\bconfiguration\b/filter/g' premake5.lua
 sed -i 's/includedirs {/includedirs {\n\t\t"PsyCross\/include",\n\t\t"PsyCross\/include\/psx",\n\t\t"PsyCross\/include\/PsyX",/g' premake5.lua
 sed -i 's/links {/links {\n\t\t"PsyCross",\n\t\t"m",/g' premake5.lua
 sed -i 's/libdirs {/libdirs {\n\t\t"PsyCross\/bin\/Release",\n\t\t"PsyCross\/bin\/Debug",/g' premake5.lua
