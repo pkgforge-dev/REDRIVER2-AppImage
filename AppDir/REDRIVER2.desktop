@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=REDRIVER2
+Comment=Driver 2 Playstation game reverse engineering effort
 Icon=REDRIVER2
 Exec=REDRIVER2
 Categories=Game;Action;Racing
