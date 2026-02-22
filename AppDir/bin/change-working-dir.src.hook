@@ -5,4 +5,4 @@ if [ ! -f "dir"/config.dat ]; then
 fi
 cd "$dir"
 
-exec ./bin/REDRIVER2 "$@"
+exec "$APPDIR"/bin/REDRIVER2 "$@"
