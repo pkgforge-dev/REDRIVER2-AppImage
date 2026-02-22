@@ -17,7 +17,7 @@
 
 </div>
 
-### ⚠️ Follow [instructions](https://github.com/OpenDriver2/REDRIVER2/wiki/Installation-instructions) and move `DRIVER2` directory to `~./driver` ⚠️
+### ⚠️ Follow [instructions](https://github.com/OpenDriver2/REDRIVER2/wiki/Installation-instructions) to extract assets and move `DRIVER2` directory to `~./driver` ⚠️
 
 ---
 
