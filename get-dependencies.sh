@@ -42,8 +42,6 @@ sed -i 's/\bconfiguration\b/filter/g' premake5.lua
 sed -i 's/includedirs {/includedirs {\n\t\t"PsyCross\/include",\n\t\t"PsyCross\/include\/psx",\n\t\t"PsyCross\/include\/PsyX",/g' premake5.lua
 sed -i 's/links {/links {\n\t\t"PsyCross",\n\t\t"m",/g' premake5.lua
 sed -i 's/libdirs {/libdirs {\n\t\t"PsyCross\/bin\/Release",\n\t\t"PsyCross\/bin\/Debug",/g' premake5.lua
-#premake5 gmake
-#cd build
 if [ "$ARCH" = "aarch64" ]; then
     sed -i 's/platforms { "x86", "x64" }/platforms { "x86", "x64", "arm64" }/g' premake5.lua
     sed -i '/filter "system:Linux"/a \ \ \ \ \ \ \ \ buildoptions { "-fpack-struct=4", "-fpermissive", "-flax-vector-conversions", "-D_SYS_TYPES_H", "-Du_long=unsigned int", "-Dulong=unsigned int" }' premake5.lua
