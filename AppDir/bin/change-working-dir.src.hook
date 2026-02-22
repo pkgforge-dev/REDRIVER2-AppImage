@@ -1,7 +1,8 @@
 dir=${XDG_DATA_HOME:-~/.driver2}
 if [ ! -f "dir"/config.dat ]; then
   mkdir -p "$dir"
-
+  cp -r "$APPDIR"/bin/config.ini "$dir"
+  cp -r "$APPDIR"/bin/cutscene_recorder.ini "$dir"
 fi
 cd "$dir"
 
