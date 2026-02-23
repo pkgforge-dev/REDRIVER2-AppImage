@@ -1,4 +1,4 @@
-dir=${XDG_DATA_HOME:-~/.driver2}
+dir=$HOME/.driver2
 if [ ! -f "dir"/config.dat ]; then
   mkdir -p "$dir"
   cp "$APPDIR"/bin/config.ini "$dir"
