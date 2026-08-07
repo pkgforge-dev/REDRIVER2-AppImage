@@ -26,7 +26,7 @@ echo "Making nightly build of REDRIVER2..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/OpenDriver2/REDRIVER2"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
-git clone --branch develop-SoapyMan --single-branch --recursive --depth 1 "$REPO" ./REDRIVER2
+git clone --recursive --depth 1 "$REPO" ./REDRIVER2
 echo "$VERSION" > ~/version
 
 # Only version of premake5 that works with REDRIVER2
