@@ -18,7 +18,7 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
-echo "Making nightly build of REDRIVER2..."
+echo "Building REDRIVER2..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/OpenDriver2/REDRIVER2"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
