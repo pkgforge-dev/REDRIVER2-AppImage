@@ -12,8 +12,6 @@ export DEPLOY_PULSE=1
 
 # Deploy dependencies
 quick-sharun ./AppDir/bin/REDRIVER2
-
-# Additional changes can be done in between here
 echo 'ANYLINUX_DO_NOT_LOAD_LIBS=libpipewire-0.3.so*:${ANYLINUX_DO_NOT_LOAD_LIBS}' >> ./AppDir/.env
 
 # Turn AppDir into AppImage
@@ -21,4 +19,4 @@ quick-sharun --make-appimage
 
 # Test the app for 12 seconds, if the app normally quits before that time
 # then skip this or check if some flag can be passed that makes it stay open
-#quick-sharun --test ./dist/*.AppImage
+quick-sharun --simple-test ./dist/*.AppImage
