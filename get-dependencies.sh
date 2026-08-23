@@ -7,7 +7,6 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    libdecor      \
     libjpeg-turbo \
     lua           \
     sdl2          \
@@ -16,7 +15,7 @@ pacman -Syu --noconfirm \
     
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini
 
 echo "Building REDRIVER2..."
 echo "---------------------------------------------------------------"
